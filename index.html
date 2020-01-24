@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="cytoscape.min.js"></script>
+        <title>Graph Visualisation</title>
+    </head>
+    <body>
+            <div id="cy"></div>
+            <div id="menu">
+                    <h2><center>Graph Algorithms Visualiser</center></h2>
+                <div class="input-container">
+                    <input type="text" class="txtSearch" placeholder="Start node" id="startnode" oninput="run()"/>
+                    <label class="dropdown">
+                            <div class="dd-button">
+                                Algorithm
+                            </div> 
+                            <input type="checkbox" class="dd-input" id="test">
+                            
+                            <ul class="dd-menu" id="ul">
+                                <li id="DFS">Depth First Search</li>
+                                <li id="BFS">Breadth First Search</li>
+                                <li id="MST">Minimum Spanning Tree</li>
+                            </ul>     
+                    </label>
+                </div>
+                <div style="padding-top: 20px;">
+                     <input type="button" class="btnSearch" Value="Clear All" onclick="reset()" />
+                </div>
+            
+                <h2><center>Custom Graph</center></h2>
+                <div>
+                    <div>
+                        <input type="button" class="btnSearch" Value="Add Nodes" onclick="customGraph()" />
+                        <input type="button" class="btnSearch" Value="Add Edge" onclick="addEdge()" />
+                    </div>
+                    <br>
+                    <div style="padding: 10px;">
+                        <input type="text" class="txtSearch" placeholder="Weight" id="Weight" />
+                        <input type="text" class="txtSearch" placeholder="From Node" id="From-Node"/>
+                        <input type="text" class="txtSearch" placeholder="To Node" id="To-Node"/>
+                    </div>
+                </div>
+                <div><p>
+                    <i>
+                        <b>**Instructions</b>
+                        <ul>
+                            <li>Click on Add Nodes.</li>
+                            <li>Then click anywhere on the draw area to generate node.</li>
+                            <li>Fill Weight,From,To node id value.</li>
+                            <li>Click on Add Edge to generate edge.</li>
+                            <li>Clear All to clean the draw area.</li>
+                            <li><a href="Readme.txt" target="_blank">Readme File</a></li>
+                        </ul>
+                    </i></p>
+                </div>
+            </div>
+        <script src="index.js"></script>
+        <script src="dfs.js"></script>
+        <script src="bfs.js"></script>
+        <script src="mst.js"></script>
+    </body>
+</html>
